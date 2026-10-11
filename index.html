@@ -99,7 +99,7 @@
   h3 { font-size: 18px; margin: 0; }
 
   /* Stack */
-  .stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
   .stack-group { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
   .stack-group h3 { font-size: 15px; margin-bottom: 12px; }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -108,6 +108,7 @@
     background: var(--accent-soft); color: var(--text);
   }
   .tag.light { background: transparent; border: 1px solid var(--border); color: var(--muted); }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px; margin: -8px 0 20px; font-size: 13px; }
 
   /* Projects */
   .projects { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
@@ -192,29 +193,36 @@
   <section id="stack">
     <div class="wrap">
       <h2>Stack</h2>
+      <p class="legend"><span class="tag">Lo uso en mi trabajo</span> <span class="tag light">Formación, colaboración con el equipo o proyectos personales</span></p>
       <div class="stack">
         <div class="stack-group">
           <h3>Identidad y Microsoft 365</h3>
           <div class="tags">
-            <span class="tag">Active Directory</span><span class="tag">Entra ID</span>
-            <span class="tag">Entra Connect</span><span class="tag">Exchange</span>
-            <span class="tag">Conditional Access</span><span class="tag">LAPS</span>
+            <span class="tag">Active Directory</span><span class="tag">Entra ID (híbrido)</span>
+            <span class="tag">Entra Connect</span><span class="tag">Exchange</span><span class="tag">LAPS</span>
+            <span class="tag light">Conditional Access</span>
           </div>
         </div>
         <div class="stack-group">
-          <h3>Sistemas</h3>
+          <h3>Sistemas y dispositivos</h3>
           <div class="tags">
-            <span class="tag">Windows Server</span><span class="tag">RDS / RemoteApp</span>
-            <span class="tag">FSLogix</span><span class="tag">GPO</span>
-            <span class="tag light">VMware vSphere</span><span class="tag light">Linux</span>
+            <span class="tag">Windows Server</span><span class="tag">RDS / RemoteApp</span><span class="tag">FSLogix</span>
+            <span class="tag">Miradore MDM</span><span class="tag">Apple Business Manager</span>
+            <span class="tag light">VMware vSphere</span><span class="tag light">FortiGate</span><span class="tag light">GPO</span><span class="tag light">Linux</span>
           </div>
         </div>
         <div class="stack-group">
-          <h3>Automatización y soporte</h3>
+          <h3>Soporte y automatización</h3>
           <div class="tags">
-            <span class="tag">PowerShell</span><span class="tag">Miradore MDM</span>
-            <span class="tag">Apple Business Manager</span><span class="tag">Soporte N1-N2</span>
-            <span class="tag light">HTML / JS</span>
+            <span class="tag">Soporte N1-N2</span><span class="tag">Gestión de incidencias</span>
+            <span class="tag">Windows · macOS · iOS · Android</span>
+            <span class="tag light">PowerShell</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Desarrollo web</h3>
+          <div class="tags">
+            <span class="tag light">HTML / CSS</span><span class="tag light">Astro</span><span class="tag light">Next.js</span><span class="tag light">Vercel</span>
           </div>
         </div>
       </div>
@@ -228,9 +236,9 @@
         <article class="card featured">
           <div class="card-head">
             <h3>PowerShell AD Toolkit</h3>
-            <span class="badge">PowerShell · Active Directory</span>
+            <span class="badge wip">en validación</span>
           </div>
-          <p>Scripts para el día a día de un equipo de sistemas: altas masivas, bajas seguras e informes de cuentas inactivas y de contraseñas que van a caducar.</p>
+          <p>Scripts de PowerShell para tareas habituales de Active Directory: altas masivas, bajas seguras e informes de cuentas inactivas y de contraseñas que van a caducar. Pendientes de validar en un laboratorio propio; todos los ejemplos usan datos ficticios (contoso.local).</p>
           <ul>
             <li>Alta masiva desde CSV con login y contraseña generados</li>
             <li>Baja reversible: deshabilita, guarda grupos y mueve a la OU de bajas, sin borrar la cuenta</li>
@@ -337,7 +345,7 @@
 </main>
 
 <footer>
-  <div class="wrap">© 2026 Josep Miñarro · Hecho a mano con HTML y CSS, alojado en GitHub Pages</div>
+  <div class="wrap">© 2026 Josep Miñarro · HTML y CSS, alojado en GitHub Pages</div>
 </footer>
 
 </body>
